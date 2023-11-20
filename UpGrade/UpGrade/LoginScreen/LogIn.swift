@@ -5,17 +5,9 @@
 //  Created by Victor Rodriguez on 11/20/23.
 //
 
-import Foundation
-//
-//  StartScreen.swift
-//  UpGrade
-//
-//  Created by Victor Rodriguez on 11/20/23.
-//
-
 import SwiftUI
 import UIKit
-
+import Firebase
 
 
 struct logIn: View {
@@ -26,6 +18,8 @@ struct logIn: View {
      // Inline Navigation Title
      UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
    }
+    
+    
     
     @State private var email = ""
     @State private var password = ""
@@ -39,9 +33,14 @@ struct logIn: View {
                     .ignoresSafeArea()
                 VStack {
                     Image(systemName: "arrow.up")
+                        .resizable()
+                        .frame(width:60, height: 70)
+                        .padding()
                         .foregroundColor(.white)
-                        .font(.largeTitle)
-                        .padding(200)
+                        .offset(y:-150)
+                        
+                       
+                     
                     
                     TextField("Enter Email:", text: $email)
                         .padding()
@@ -49,23 +48,37 @@ struct logIn: View {
                         .background(.white)
                         .cornerRadius(10)
                         .border(.red, width: CGFloat(wrongEmail))
-                .padding(10)
+                        .padding(10)
+                       
                     
-                    TextField("Enter Password:", text: $password)
+                    SecureField("Enter Password:", text: $password)
                         .padding()
                         .frame(width: 300, height:30,alignment: .center)
                         .background(.white)
                         .cornerRadius(10)
                         .border(.red, width: CGFloat(wrongPassword))
-                .padding(100)
+                        .padding(50)
                     
-                    Text("Login")
-                        .font(.largeTitle)
-                        .bold()
-                        .padding()
-                        .foregroundColor(.white)
+                    Button{
+                        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                            if let error = error {
+                                print(error)
+                                return
+                            }
+                            
+                            if let authResult = authResult {
+                                print(authResult.user.uid)
+                            }
+                        }
+                    } label: {
+                        Text("Login")
+                            .font(.largeTitle)
+                            .bold()
+                            .padding()
+                            .foregroundColor(.white)
+                    }
                     
-            
+                     
                     
                 }
             }
