@@ -3,9 +3,10 @@
 //  UpGrade
 //
 //  Created by Victor Rodriguez on 11/20/23.
-//
+
 
 import SwiftUI
+import FirebaseCore
 
 struct ContentView: View {
     var body: some View {
