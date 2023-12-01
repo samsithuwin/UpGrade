@@ -12,6 +12,9 @@
 		5710CCAF2B1A594E00AAB264 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5710CCAE2B1A594E00AAB264 /* Product.swift */; };
 		5710CCB12B1A595300AAB264 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5710CCB02B1A595300AAB264 /* ProductCard.swift */; };
 		5710CCB42B1A59A500AAB264 /* SignOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5710CCB32B1A59A500AAB264 /* SignOut.swift */; };
+		5710CCB62B1A5D7A00AAB264 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5710CCB52B1A5D7A00AAB264 /* CartView.swift */; };
+		5710CCB82B1A5E6400AAB264 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5710CCB72B1A5E6400AAB264 /* CartManager.swift */; };
+		5710CCBA2B1A605C00AAB264 /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5710CCB92B1A605C00AAB264 /* ProductRow.swift */; };
 		571DDD9D2B0BC6620093678E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 571DDD9C2B0BC6620093678E /* FirebaseAnalytics */; };
 		571DDD9F2B0BC6620093678E /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 571DDD9E2B0BC6620093678E /* FirebaseAnalyticsOnDeviceConversion */; };
 		571DDDA12B0BC6620093678E /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 571DDDA02B0BC6620093678E /* FirebaseAnalyticsSwift */; };
@@ -58,6 +61,9 @@
 		5710CCAE2B1A594E00AAB264 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		5710CCB02B1A595300AAB264 /* ProductCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
 		5710CCB32B1A59A500AAB264 /* SignOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignOut.swift; sourceTree = "<group>"; };
+		5710CCB52B1A5D7A00AAB264 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		5710CCB72B1A5E6400AAB264 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		5710CCB92B1A605C00AAB264 /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
 		571DDDD52B0BEA180093678E /*  String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " String.swift"; sourceTree = "<group>"; };
 		571DDDD72B0BF1C50093678E /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		571DDDD92B0BF5430093678E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -182,6 +188,7 @@
 			children = (
 				57C2D0062B0BABF7008592D7 /* LogIn.swift */,
 				5710CCAA2B1A591600AAB264 /* HomeScreen.swift */,
+				5710CCB52B1A5D7A00AAB264 /* CartView.swift */,
 			);
 			path = LoginScreen;
 			sourceTree = "<group>";
@@ -202,7 +209,9 @@
 				5710CCAE2B1A594E00AAB264 /* Product.swift */,
 				57C2D0042B0BA66D008592D7 /* AppCustomColors.swift */,
 				5710CCAC2B1A594A00AAB264 /* CartButton.swift */,
+				5710CCB72B1A5E6400AAB264 /* CartManager.swift */,
 				57C2CFF32B0BA4EF008592D7 /* Assets.xcassets */,
+				5710CCB92B1A605C00AAB264 /* ProductRow.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -314,11 +323,14 @@
 				57C2D0092B0BAD00008592D7 /* CreateAnAccount.swift in Sources */,
 				57C2D0072B0BABF7008592D7 /* LogIn.swift in Sources */,
 				57C2CFF22B0BA4EE008592D7 /* ContentView.swift in Sources */,
+				5710CCBA2B1A605C00AAB264 /* ProductRow.swift in Sources */,
 				57C2CFF02B0BA4EE008592D7 /* UpGradeApp.swift in Sources */,
 				57C2D0052B0BA66D008592D7 /* AppCustomColors.swift in Sources */,
 				5710CCAF2B1A594E00AAB264 /* Product.swift in Sources */,
 				57C2D0032B0BA58B008592D7 /* StartScreen.swift in Sources */,
+				5710CCB62B1A5D7A00AAB264 /* CartView.swift in Sources */,
 				5710CCAB2B1A591600AAB264 /* HomeScreen.swift in Sources */,
+				5710CCB82B1A5E6400AAB264 /* CartManager.swift in Sources */,
 				571DDDD82B0BF1C50093678E /* AuthView.swift in Sources */,
 				571DDDD62B0BEA180093678E /*  String.swift in Sources */,
 				5710CCAD2B1A594A00AAB264 /* CartButton.swift in Sources */,

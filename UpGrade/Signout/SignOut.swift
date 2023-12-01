@@ -45,14 +45,6 @@ struct SignOut: View {
             }
         }
         .navigationTitle("Profile")
-            .toolbar {
-                NavigationLink {
-                    SignOut()
-                } label: {
-                    Image(systemName: "person.circle")
-                   
-                }
-            }
     }
 }
 

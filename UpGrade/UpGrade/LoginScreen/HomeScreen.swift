@@ -10,19 +10,21 @@ import SwiftUI
 
 
 struct HomeScreen: View {
-    
+    @StateObject var cartManager = CartManager()
     @State var isPresenting: Bool = false
     @State var searchText: String = ""
-    
+    var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
     
     var body: some View {
         
-        var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
+     
         
         NavigationView{
             ScrollView {
+              
                 LazyVGrid(columns: columns, spacing:20) {
                     ForEach(productList, id: \.id) { product in ProductCard(product: product)
+                            .environmentObject(cartManager)
                     }
                 }
                 .padding()
@@ -37,19 +39,23 @@ struct HomeScreen: View {
                         }
                         
                         ToolbarItem(placement: .topBarLeading) {
-                           CartButton(numberOfProducts: 1)
+                            NavigationLink {
+                                CartView()
+                                    .environmentObject(cartManager)
+                            } label: {
+                                CartButton(numberOfProducts: cartManager.products.count)
+
+                            }
                         }
                         
                     }
 
             }.navigationTitle("UpGrade")
                 .navigationBarTitleDisplayMode(.inline)
+               Color("myColor")
+             
         }
-        .sheet(isPresented: $isPresenting ) {
-            NavigationView {
-                SignOut()
-            }
-        }
+        
         .searchable(text: $searchText)
         .navigationBarBackButtonHidden()
     }
