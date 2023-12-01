@@ -16,7 +16,7 @@ struct UpGradeApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            startScreen()
+            ContentView()
         }
     }
 }

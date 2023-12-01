@@ -41,10 +41,14 @@ struct startScreen: View {
                         .background(.cyan)}
                     .padding(60)
                     
+
+                    
                 }
             }
         }
     }
+    
+ 
 }
 
 #Preview {

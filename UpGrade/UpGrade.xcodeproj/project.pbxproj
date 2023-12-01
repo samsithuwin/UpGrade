@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5710CCAB2B1A591600AAB264 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5710CCAA2B1A591600AAB264 /* HomeScreen.swift */; };
+		5710CCAD2B1A594A00AAB264 /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5710CCAC2B1A594A00AAB264 /* CartButton.swift */; };
+		5710CCAF2B1A594E00AAB264 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5710CCAE2B1A594E00AAB264 /* Product.swift */; };
+		5710CCB12B1A595300AAB264 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5710CCB02B1A595300AAB264 /* ProductCard.swift */; };
+		5710CCB42B1A59A500AAB264 /* SignOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5710CCB32B1A59A500AAB264 /* SignOut.swift */; };
 		571DDD9D2B0BC6620093678E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 571DDD9C2B0BC6620093678E /* FirebaseAnalytics */; };
 		571DDD9F2B0BC6620093678E /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 571DDD9E2B0BC6620093678E /* FirebaseAnalyticsOnDeviceConversion */; };
 		571DDDA12B0BC6620093678E /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 571DDDA02B0BC6620093678E /* FirebaseAnalyticsSwift */; };
@@ -48,6 +53,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5710CCAA2B1A591600AAB264 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		5710CCAC2B1A594A00AAB264 /* CartButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
+		5710CCAE2B1A594E00AAB264 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		5710CCB02B1A595300AAB264 /* ProductCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
+		5710CCB32B1A59A500AAB264 /* SignOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignOut.swift; sourceTree = "<group>"; };
 		571DDDD52B0BEA180093678E /*  String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " String.swift"; sourceTree = "<group>"; };
 		571DDDD72B0BF1C50093678E /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		571DDDD92B0BF5430093678E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -101,6 +111,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5710CCB22B1A59A500AAB264 /* Signout */ = {
+			isa = PBXGroup;
+			children = (
+				5710CCB32B1A59A500AAB264 /* SignOut.swift */,
+			);
+			path = Signout;
+			sourceTree = "<group>";
+		};
 		571DDDD42B0BE9DF0093678E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +130,7 @@
 		57C2CFE32B0BA4EE008592D7 = {
 			isa = PBXGroup;
 			children = (
+				5710CCB22B1A59A500AAB264 /* Signout */,
 				57C2CFEE2B0BA4EE008592D7 /* UpGrade */,
 				57C2CFED2B0BA4EE008592D7 /* Products */,
 			);
@@ -162,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				57C2D0062B0BABF7008592D7 /* LogIn.swift */,
+				5710CCAA2B1A591600AAB264 /* HomeScreen.swift */,
 			);
 			path = LoginScreen;
 			sourceTree = "<group>";
@@ -178,7 +198,10 @@
 			isa = PBXGroup;
 			children = (
 				571DDDD72B0BF1C50093678E /* AuthView.swift */,
+				5710CCB02B1A595300AAB264 /* ProductCard.swift */,
+				5710CCAE2B1A594E00AAB264 /* Product.swift */,
 				57C2D0042B0BA66D008592D7 /* AppCustomColors.swift */,
+				5710CCAC2B1A594A00AAB264 /* CartButton.swift */,
 				57C2CFF32B0BA4EF008592D7 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -287,14 +310,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5710CCB42B1A59A500AAB264 /* SignOut.swift in Sources */,
 				57C2D0092B0BAD00008592D7 /* CreateAnAccount.swift in Sources */,
 				57C2D0072B0BABF7008592D7 /* LogIn.swift in Sources */,
 				57C2CFF22B0BA4EE008592D7 /* ContentView.swift in Sources */,
 				57C2CFF02B0BA4EE008592D7 /* UpGradeApp.swift in Sources */,
 				57C2D0052B0BA66D008592D7 /* AppCustomColors.swift in Sources */,
+				5710CCAF2B1A594E00AAB264 /* Product.swift in Sources */,
 				57C2D0032B0BA58B008592D7 /* StartScreen.swift in Sources */,
+				5710CCAB2B1A591600AAB264 /* HomeScreen.swift in Sources */,
 				571DDDD82B0BF1C50093678E /* AuthView.swift in Sources */,
 				571DDDD62B0BEA180093678E /*  String.swift in Sources */,
+				5710CCAD2B1A594A00AAB264 /* CartButton.swift in Sources */,
+				5710CCB12B1A595300AAB264 /* ProductCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

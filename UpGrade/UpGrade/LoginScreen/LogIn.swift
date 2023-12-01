@@ -6,58 +6,56 @@
 //
 
 import SwiftUI
-import UIKit
 import Firebase
 
 
 struct logIn: View {
-    
-    init() {
-     // Large Navigation Title
-     UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-     // Inline Navigation Title
-     UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
-   }
-    
-    
-    
     @State private var email = ""
     @State private var password = ""
     @State private var wrongEmail = 0
     @State private var wrongPassword = 0
     @State private var showingLoginScreen = false
+    @State private var userIsLoggedIn = false
+    
+    
     var body: some View {
         NavigationView{
             ZStack{
                 Color("myColor")
                     .ignoresSafeArea()
-                VStack {
+                VStack(spacing: 20)  {
                     Image(systemName: "arrow.up")
                         .resizable()
                         .frame(width:60, height: 70)
                         .padding()
                         .foregroundColor(.white)
                         .offset(y:-150)
-                        
-                       
-                     
                     
-                    TextField("Enter Email:", text: $email)
-                        .padding()
-                        .frame(width: 300, height:30,alignment: .center)
-                        .background(.white)
-                        .cornerRadius(10)
-                        .border(.red, width: CGFloat(wrongEmail))
-                        .padding(10)
-                       
+                    TextField("Email:", text: $email)
+                        .foregroundColor(.white)
+                        .textFieldStyle(.plain)
+                        .placeholder(when: email.isEmpty) {
+                            Text("Email")
+                                .foregroundColor(.white)
+                                .bold()
+                        }
                     
-                    SecureField("Enter Password:", text: $password)
-                        .padding()
-                        .frame(width: 300, height:30,alignment: .center)
-                        .background(.white)
-                        .cornerRadius(10)
-                        .border(.red, width: CGFloat(wrongPassword))
-                        .padding(50)
+                    Rectangle()
+                        .frame(width:350, height:1)
+                        .foregroundColor(.white)
+                    
+                    SecureField("Password:", text: $password)
+                        .foregroundColor(.white)
+                        .placeholder(when: password.isEmpty)
+                    {
+                        Text("Password")
+                            .foregroundColor(.white)
+                            .bold()
+                    }
+                    
+                    Rectangle()
+                        .frame(width:350, height:1)
+                        .foregroundColor(.white)
                     
                     Button{
                         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
@@ -71,23 +69,51 @@ struct logIn: View {
                             }
                         }
                     } label: {
-                        Text("Login")
-                            .font(.largeTitle)
+                        Text("Log In")
                             .bold()
-                            .padding()
+                            .frame(width:200, height:40)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                    .fill(.linearGradient(colors: [.pink, .red], startPoint: .top, endPoint: .bottomTrailing))
+                            )
                             .foregroundColor(.white)
                     }
+                    .padding(.top)
+                    .offset(y:100)
                     
-                     
+                    NavigationLink {
+                        ContentView()
+                    } label: {
+                        Text("Need an Account? Press Here")
+                            .bold()
+                            .foregroundColor(.white)
+                    }
+                    .padding()
+                    .offset(y:110)
+
                     
+
                 }
+                .frame(width:350)
+                    .onAppear(){
+                        Auth.auth().addStateDidChangeListener { auth, user in if user != nil {
+                            userIsLoggedIn.toggle()
+                            }
+                        }
+                    }
             }
-            /*.navigationTitle("Login")*/
-               
         }
+        .navigationBarHidden(true)
+
+        .ignoresSafeArea()
     }
+    
+    
 }
+
+
 
 #Preview {
     logIn()
 }
+
