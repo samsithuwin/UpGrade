@@ -15,6 +15,8 @@
 		5710CCB62B1A5D7A00AAB264 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5710CCB52B1A5D7A00AAB264 /* CartView.swift */; };
 		5710CCB82B1A5E6400AAB264 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5710CCB72B1A5E6400AAB264 /* CartManager.swift */; };
 		5710CCBA2B1A605C00AAB264 /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5710CCB92B1A605C00AAB264 /* ProductRow.swift */; };
+		5710CCBC2B1A707700AAB264 /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5710CCBB2B1A707700AAB264 /* PaymentButton.swift */; };
+		5710CCBE2B1E264900AAB264 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5710CCBD2B1E264900AAB264 /* Settings.swift */; };
 		571DDD9D2B0BC6620093678E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 571DDD9C2B0BC6620093678E /* FirebaseAnalytics */; };
 		571DDD9F2B0BC6620093678E /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 571DDD9E2B0BC6620093678E /* FirebaseAnalyticsOnDeviceConversion */; };
 		571DDDA12B0BC6620093678E /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 571DDDA02B0BC6620093678E /* FirebaseAnalyticsSwift */; };
@@ -64,6 +66,8 @@
 		5710CCB52B1A5D7A00AAB264 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		5710CCB72B1A5E6400AAB264 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		5710CCB92B1A605C00AAB264 /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
+		5710CCBB2B1A707700AAB264 /* PaymentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentButton.swift; sourceTree = "<group>"; };
+		5710CCBD2B1E264900AAB264 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		571DDDD52B0BEA180093678E /*  String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " String.swift"; sourceTree = "<group>"; };
 		571DDDD72B0BF1C50093678E /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		571DDDD92B0BF5430093678E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				5710CCB32B1A59A500AAB264 /* SignOut.swift */,
+				5710CCBD2B1E264900AAB264 /* Settings.swift */,
 			);
 			path = Signout;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 				5710CCB72B1A5E6400AAB264 /* CartManager.swift */,
 				57C2CFF32B0BA4EF008592D7 /* Assets.xcassets */,
 				5710CCB92B1A605C00AAB264 /* ProductRow.swift */,
+				5710CCBB2B1A707700AAB264 /* PaymentButton.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -321,9 +327,11 @@
 			files = (
 				5710CCB42B1A59A500AAB264 /* SignOut.swift in Sources */,
 				57C2D0092B0BAD00008592D7 /* CreateAnAccount.swift in Sources */,
+				5710CCBC2B1A707700AAB264 /* PaymentButton.swift in Sources */,
 				57C2D0072B0BABF7008592D7 /* LogIn.swift in Sources */,
 				57C2CFF22B0BA4EE008592D7 /* ContentView.swift in Sources */,
 				5710CCBA2B1A605C00AAB264 /* ProductRow.swift in Sources */,
+				5710CCBE2B1E264900AAB264 /* Settings.swift in Sources */,
 				57C2CFF02B0BA4EE008592D7 /* UpGradeApp.swift in Sources */,
 				57C2D0052B0BA66D008592D7 /* AppCustomColors.swift in Sources */,
 				5710CCAF2B1A594E00AAB264 /* Product.swift in Sources */,

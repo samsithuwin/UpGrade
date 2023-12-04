@@ -13,7 +13,7 @@ struct SignOut: View {
     @State var signedOut = false
     @State var isPresenting: Bool = false
     
-    func handleLogOut(){
+ func handleLogOut(){
         do {
             try Auth.auth().signOut()
             signedOut.toggle()
@@ -35,9 +35,6 @@ struct SignOut: View {
     @ViewBuilder
     var content: some View {
         NavigationView {
-            
-        
-            
             Button {
                 handleLogOut()
             } label: {
