@@ -34,7 +34,7 @@ struct logIn: View {
                 VStack {
                     Image(systemName: "arrow.up")
                         .resizable()
-                        .frame(width:60, height: 70)
+                        .frame(width:60, height: 71)
                         .padding()
                         .foregroundColor(.white)
                         .offset(y:-150)
